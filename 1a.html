@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/javascript">
+
+        const React = {
+            createElement: function(tag, style, children) {
+                const element = document.createElement(tag);
+
+                if(typeof children === 'object') {
+                    for(let val of children) 
+                    element.append(val);   
+                } else 
+                element.innerText = children;
+                
+
+                if (style && typeof style === 'object') {
+                    for (let key in style) {
+                        element.style[key] = style[key];
+                    }
+                }
+                return element;
+            }
+        }
+
+         const ReactDOM = {
+            render: function(element, root) {
+                root.append(element);
+            }
+        }
+
+         const header1 = React.createElement('h1', {fontSize: "20px", backgroundColor: "skyblue"}, "hello world");
+        const header2 = React.createElement('h2', {fontSize: "30px", backgroundColor: "yellow"}, "hello world 2");
+        const paragraph1 = React.createElement('p', {fontSize: "", backgroundColor: "lightgreen"}, "hey everyone how are you ?");
+
+
+        const li1 = React.createElement('li', {}, "HTML");
+        const li2 = React.createElement('li', {}, "CSS");
+        const li3 = React.createElement('li', {}, "JavaScript");
+        const li4 = React.createElement('li', {}, "React");
+
+        const Ul = React.createElement('ul', {fontSize: "30px", backgroundColor: "lightgreen"}, [ li1, li2, li3, li4]);
+
+        ReactDOM.render(header1, document.getElementById('root'));
+        ReactDOM.render(header2, document.getElementById('root'));
+        ReactDOM.render(paragraph1, document.getElementById('root'));
+        ReactDOM.render(Ul, document.getElementById('root'));
+        
+         
+    </script>
+</body>
+</html>
