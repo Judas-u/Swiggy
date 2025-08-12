@@ -23,8 +23,9 @@ export default function Header() {
                     OrderFood and Groceries. Discover Best Restaurants. Swiggy it!
                 </div>
 
-                <div>
-
+                <div className="max-w-[50%]  container mx-auto flex gap-5 mt-5">
+                    <input className="bg-white w-[40%] text-xl px-6 py-4 rounded-2xl" placeholder="Delhi, India"></input>
+                    <input className="bg-white w-[55%] text-xl px-6 py-4 rounded-2xl" placeholder="Search for Resturant, item or more"></input>
                 </div>
             </div>
 
