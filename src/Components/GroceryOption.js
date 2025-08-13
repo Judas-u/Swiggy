@@ -6,8 +6,8 @@ export default function FoodOption() {
     return (
         <>
             <div className="mt-20 w-[80%] container max-auto ml-30">
-                <h1>Shop Groceries on Instamart</h1>
-                <div className="w-[100%] container max-auto flex flex-nowrap overflow-x-auto mt-10 ml-10 gap-15">
+                <h1 className="text-3xl font-medium">Shop Groceries on Instamart</h1>
+                <div className="w-[100%] container max-auto  flex flex-nowrap overflow-x-auto mt-10 ml-10 gap-15">
                     {
                         GroceryGridCards.map((foodData)=> <GroceryCard key={foodData.id} foodData={foodData}></GroceryCard>)
                     }
