@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import FoodOption from "./Components/FoodOption";
 import GroceryOption from "./Components/GroceryOption";
 import DineOption from "./Components/DineOption";
+import Resturant from "./Components/Resturant";
 import './index.css';
 
 
@@ -14,6 +15,7 @@ export default function App() {
             <FoodOption></FoodOption>
             <GroceryOption></GroceryOption>
             <DineOption></DineOption>
+            <Resturant></Resturant>
         </>
     );
 }
